@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <link rel="stylesheet" href="components/bootstrap/docs/assets/css/bootstrap.css" />
+    <script src="components/jquery/jquery.js"></script>
+    <script src="components/underscore/underscore.js"></script>
+    <script src="components/requirejs/require.js"></script>
+    <script>
+      requirejs.config({
+        baseUrl: 'build/src-amd'
+      , paths: {
+          jquery: '../../components/jquery/jquery'
+        , chaplin: '../../components/chaplin/chaplin'
+        , backbone: '../../components/backbone/backbone'
+        , underscore: '../../components/underscore/underscore'
+        }
+      , shim: {
+          jquery: { exports: 'jQuery' }
+        , underscore: { exports: '_' }
+        , backbone: { exports: 'Backbone', deps: ['underscore', 'jquery'] }
+        }
+      });
+    </script>
+  </head>
+  <body style="padding-top: 65px;">
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="#">Chapgrid</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span12 chapgrid-grid">
+          <h1>Chapgrid</h1>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      require([
+        'chaplin'
+      , 'chapgrid'
+      , 'chapgrid/grid'
+      ], function(Chaplin, Chapgrid) {
+
+        var data = _.map(_.range(0,100), function(n) { return {
+          id: n
+        , string: n+'-title'
+        , email: 'user-'+n+'@example.com'
+        , uri: 'http://user-'+n+'.example.com'
+        , datetime: '1987-02-15'
+        , bool: !!(n%2)
+        , select: 'foo'
+        }});
+
+        Chapgrid.construct('Grid', {
+          container: '.chapgrid-grid'
+        , className: 'table table-striped table-hover'
+        , autoRender: true
+        , collection: new Chaplin.Collection(data)
+        , columns: [{
+            name: 'id'
+          , cell: 'Cell'
+          }, {
+            name: 'string'
+          , cell: 'StringCell'
+          }]
+        });
+
+      });
+    </script>
+
+  </body>
+</html>

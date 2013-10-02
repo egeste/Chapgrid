@@ -1,0 +1,17 @@
+{
+  "name": "Chapgrid"
+, "version": "0.0.1"
+, "dependencies": {
+    "jquery": "latest"
+  , "chaplin": "latest"
+  , "backbone": "latest"
+  , "underscore": "latest"
+  }
+, "devDependencies": {
+    "sinon": "latest"
+  , "bootstrap": "2.3.2"
+  , "requirejs": "latest"
+  , "jasmine-sinon": "latest"
+  , "jasmine-jquery": "1.5.8"
+  }
+}

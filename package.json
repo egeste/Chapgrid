@@ -1,0 +1,25 @@
+{
+  "name": "Chapgrid",
+  "version": "0.0.1",
+  "author": "Steve (Egesté) Regester <egeste@lookout.com>",
+  "repository": "https://github.com/egeste/chapgrid",
+  "devDependencies": {
+    "bower": "latest"
+  , "grunt-cli": "latest"
+  , "grunt-blanket": "latest"
+  , "grunt-markdown": "latest"
+  , "grunt-coffeelint": "latest"
+  , "grunt-bower-task": "latest"
+  , "grunt-docco-multi": "latest"
+  , "grunt-contrib-clean": "latest"
+  , "grunt-contrib-watch": "latest"
+  , "grunt-contrib-coffee": "latest"
+  , "grunt-contrib-concat": "latest"
+  , "grunt-contrib-jshint": "latest"
+  , "grunt-contrib-uglify": "latest"
+  , "grunt-contrib-connect": "latest"
+  , "grunt-contrib-jasmine": "latest"
+  , "grunt-contrib-requirejs": "latest"
+  , "grunt-template-jasmine-requirejs": "latest"
+  }
+}

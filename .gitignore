@@ -1,0 +1,11 @@
+*.DS_Store
+
+/components
+/node_modules
+
+/.grunt
+/specs.html
+/_SpecRunner.html
+
+/docs
+/build
